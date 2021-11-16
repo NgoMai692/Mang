@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai9</title>
+</head>
+<body>
+<p id="display"></p>
+<p id="display1"></p>
+<p id="display2"></p>
+<script>
+    let num = +prompt("Nhập số lượng phần tử của mảng: ");
+    let a = new Array(num);
+    let b = new Array(num);
+
+    for (let i = 0; i < a.length; i++) {
+        a[i] = +prompt("Nhập phần tử thứ " + (i + 1));
+    }
+    for (let i = 0; i < b.length; i++) {
+        b[i] = +prompt("Nhập phần tử thứ " + (i + 1));
+    }
+
+    let c = a.concat(b);
+    document.getElementById("display").innerText = (a.join());
+    document.getElementById("display1").innerText = (b.join());
+    document.getElementById("display2").innerText = (c.join());
+
+</script>
+</body>
+</html>
