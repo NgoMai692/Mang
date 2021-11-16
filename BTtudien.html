@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tudien</title>
+</head>
+<body>
+<h1>Từ điển tiếng anh</h1>
+<input type="text" id="input">
+<button onclick="dich()">Dịch</button>
+<p id="display"></p>
+<script>
+
+    function dich(){
+        let input = document.getElementById("input").value;
+        let Eng = ["Hello","Bye","code"];
+        let Viet = ["Xin chào","Tạm biệt","mã"];
+        for (let i = 0; i < Eng.length; i++) {
+            if (Eng[i] === input){
+                document.getElementById("display").innerText=(Viet[i]);
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>
