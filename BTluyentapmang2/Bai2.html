@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+</head>
+<body>
+<script>
+    let a = ['c','s','c','2','6','1'];
+    let first = 0;
+    let last = a.length-1;
+    let tem = [];
+    while (first < last){
+        tem = a[first];
+        a[first] = a[last];
+        a[last] = tem;
+        first++;
+        last--;
+    }
+    console.log(a.join(''));
+</script>
+</body>
+</html>

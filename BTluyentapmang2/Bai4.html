@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai4</title>
+</head>
+<body>
+<input type="text" id="input">
+<button onclick="demso()">Đếm các số</button>
+<p id="display"></p>
+<script>
+    function demso(){
+        let string = document.getElementById("input").value;
+        let arr = string.toString();
+        let count = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            if(isNaN(arr[i])){
+                count++;
+            }
+        }
+        document.getElementById("display").innerText = ("Số chữ số trong chuỗi là: "+(arr.length-count));
+    }
+
+</script>
+</body>
+</html>

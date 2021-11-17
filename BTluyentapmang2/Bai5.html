@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai5</title>
+</head>
+<p>Nhập chuỗi thứ nhất:</p>
+<input type="text" id="input1">
+<p>Nhập chuỗi thứ hai:</p>
+<input type="text" id="input2">
+<button onclick="sosanh()">So sánh</button>
+<p id="display"></p>
+<body>
+<script>
+    function sosanh(){
+        let chuoi1 = document.getElementById("input1").value;
+        let chuoi2 = document.getElementById("input2").value;
+        let arr1 = chuoi1.split();
+        let arr2 = chuoi2.split();
+
+        if (arr1.length === arr2.length){
+            let check = true;
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i]!==arr2[i]){
+                    check = false
+                    break;
+                }
+            }
+            if (check){
+                document.getElementById("display").innerText = ("Hai chuỗi giống nhau!");
+            }else {
+                document.getElementById("display").innerText = ("Hai chuỗi khác nhau!");
+            }
+        }else{
+            document.getElementById("display").innerText =("Hai chuỗi khác nhau!");
+        }
+
+
+
+    }
+</script>
+
+
+</body>
+</html>

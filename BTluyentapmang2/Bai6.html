@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai6</title>
+</head>
+<body>
+<input type="text" id="input">
+<button onclick="Change()">Change</button>
+<p id="display"></p>
+<script>
+    function Change() {
+        let string = document.getElementById("input").value;
+        let arr = string.split("");
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === "-") {
+                arr[i] = "_";
+            }
+        }
+    document.getElementById("display").innerText = arr.join("");
+
+    }
+
+</script>
+</body>
+</html>
